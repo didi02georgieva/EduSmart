@@ -1,0 +1,86 @@
+/* Home.css */
+
+.home-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  .home-hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .home-hero h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .hero-subtext {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .hero-buttons button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: #267047;
+  }
+  
+  .home-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .stat h2 {
+    color: #2e8b57;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .stat p {
+    color: #666;
+  }
+  
+  .home-categories {
+    padding-top: 10px;
+  }
+  
+  .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .category-list span {
+    background-color: #eafaf1;
+    color: #2e8b57;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  

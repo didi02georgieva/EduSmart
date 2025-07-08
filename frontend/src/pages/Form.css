@@ -1,0 +1,28 @@
+/* === Малки бутони (напр. "Виж теста", "Добави въпрос") === */
+.btn-small {
+    background-color: #2c357d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-small:hover {
+    background-color: #1e265f;
+  }
+  
+  /* Червен бутон за изтриване */
+  .btn-delete {
+    background-color: #e74c3c !important;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c0392b !important;
+  }
+
+  
+  

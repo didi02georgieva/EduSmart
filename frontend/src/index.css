@@ -1,0 +1,354 @@
+/* Общи настройки */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  background-color: #f4f4f4;
+}
+
+/* Навигационна лента */
+.header {
+  background-color: #222;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* Класически стил за login/register */
+.auth-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.auth-container h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.auth-container input,
+.auth-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #21867a;
+}
+
+/* Стил за тестове */
+.form-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: left;
+}
+
+.form-container h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #21867a;
+}
+
+/* Модален прозорец */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.modal-content ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #21867a;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.answer-options label {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.answer-option {
+  margin-bottom: 8px;
+}
+
+.question-block {
+  background-color: #f9f9f9;
+  border-left: 5px solid #2a9d8f;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.question-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.answer-option {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.question-block {
+  background-color: #f9f9f9;
+  border-left: 5px solid #2a9d8f;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.question-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.answer-option {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.question-title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.question-number {
+  background-color: #2a9d8f;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.user-role {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  color: #444;
+}
+
+.dashboard-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4d9f94;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.dashboard-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4d9f94;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #3c877c;
+}
+
+.form-container ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+
+.btn-small {
+  padding: 6px 12px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.btn-small:hover {
+  background-color: #21867a;
+}
+
+
+/* Модален прозорец */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.modal-content ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #21867a;
+}
+
