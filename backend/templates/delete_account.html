@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Изтриване на профил{% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <div class="content-box">
+        <h1>🗑️ Изтриване на профил</h1>
+        <p>Сигурни ли сте, че искате да изтриете профила си? Тази операция е необратима.</p>
+
+        <form method="post" action="/delete-account">
+            <button type="submit" class="danger-button">Да, изтрий профила ми</button>
+        </form>
+
+        <br>
+        <a href="/"><button>⬅ Назад към менюто</button></a>
+    </div>
+</div>
+{% endblock %}

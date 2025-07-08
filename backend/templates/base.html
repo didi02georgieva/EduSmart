@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Тест платформа{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        nav {
+            background-color: #222;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="navbar-logo"> </div>
+    <div class="nav-right">
+        {% if user %}
+            {% if user.role == 'teacher' %}
+                <a href="/">Начало</a>
+                <a href="/create-test">Създай тест</a>
+                <a href="/grant-access">Дай достъп</a>
+                <a href="/tests">Тестове</a>
+                <a href="/logout">Изход</a> 
+            {% elif user.role == 'student' %}
+                <a href="/">Начало</a>
+                <a href="/tests">Всички тестове</a>
+                <a href="/results">Моите резултати</a>
+                <a href="/logout">Изход</a>
+                <a href="/delete-account" class="danger-button">🗑️ Изтрий профила</a>
+            {% endif %}
+        {% else %}
+            <a href="/">Начало</a>
+            <a href="/login">Вход</a>
+            <a href="/register">Регистрация</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="page-content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Моите резултати{% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <div class="content-box">
+        <h2>📊 Моите резултати</h2>
+
+        {% if results and results|length > 0 %}
+            <ul>
+                {% for result in results %}
+                    <li>
+                        Тест ID: {{ result.test_id }} – Резултат: {{ result.score }} точки
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>⏳ Все още нямате решени тестове.</p>
+        {% endif %}
+
+        <br>
+        <a href="/"><button>⬅ Назад</button></a>
+    </div>
+</div>
+{% endblock %}

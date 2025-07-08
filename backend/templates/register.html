@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="content-box">
+            <h1>Регистрация</h1>
+            <form method="post" action="/register">
+                <label>Име:</label><br>
+                <input type="text" name="name" required><br><br>
+
+                <label>Имейл:</label><br>
+                <input type="email" name="email" required><br><br>
+
+                <label>Парола:</label><br>
+                <input type="password" name="password" required><br><br>
+
+                <label>Роля:</label><br>
+                <select name="role">
+                    <option value="student">Ученик</option>
+                    <option value="teacher">Преподавател</option>
+                </select><br><br>
+
+                <button type="submit">Регистрирай ме</button>
+            </form>
+
+            <br>
+            <a href="/login"><button>⬅ Вече имаш профил?</button></a>
+        </div>
+    </div>
+</body>
+</html>

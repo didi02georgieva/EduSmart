@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Преглед на верните отговори{% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <div class="content-box">
+        <h1>📖 Преглед на верните отговори</h1>
+
+        {% for q in questions %}
+            <div style="margin-top: 20px;">
+                <strong>Въпрос {{ loop.index }}:</strong> {{ q.text }}<br><br>
+
+                {% for a in answers %}
+                    {% if a.question_id == q.id and a.is_correct %}
+                        ✅ {{ a.text }}<br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <br>
+        <a href="/"><button>⬅ Назад към менюто</button></a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Дай достъп до тест</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="center-container">
+    <div class="content-box">
+        <h2>🔓 Дай достъп до тест</h2>
+        <form method="post" action="/grant-access">
+            <label>Избери ученик:</label><br>
+            <select name="user_id" required>
+                {% for student in students %}
+                    <option value="{{ student.id }}">{{ student.name }} ({{ student.email }})</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label>Избери тест:</label><br>
+            <select name="test_id" required>
+                {% for test in tests %}
+                    <option value="{{ test.id }}">{{ test.title }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <button type="submit">Дай достъп</button>
+        </form>
+
+        <br>
+        <a href="/"><button>⬅ Назад</button></a>
+    </div>
+</div>
+</body>
+</html>

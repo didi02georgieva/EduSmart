@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Списък с тестове</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="content-box">
+            <h1>Всички налични тестове</h1>
+
+            {% if tests %}
+                <table border="1" cellpadding="10" style="width: 100%; margin-top: 20px;">
+                    <tr>
+                        <th>ID</th>
+                        <th>Заглавие</th>
+                        <th>Описание</th>
+                        <th>Създател</th>
+                        <th>Действия</th>
+                    </tr>
+                    {% for test in tests %}
+                    <tr>
+                        <td>{{ test.id }}</td>
+                        <td>{{ test.title }}</td>
+                        <td>{{ test.description }}</td>
+                        <td>{{ test.creator_id }}</td>
+                        <td>
+                            <a href="/solve/{{ test.id }}"><button>🧪 Реши</button></a>
+                            {% if user and user.role == "teacher" %}
+                                <a href="/add-questions/{{ test.id }}"><button>➕ Добави въпроси</button></a>
+                            {% endif %}
+                        </td>
+                        
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>Все още няма създадени тестове.</p>
+            {% endif %}
+
+            <br>
+            <a href="/"><button>⬅ Назад</button></a>
+        </div>
+    </div>
+</body>
+</html>

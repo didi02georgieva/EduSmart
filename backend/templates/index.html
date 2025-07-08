@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Създай тест</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="content-box">
+            <h1>Създаване на тест</h1>
+            <form method="post" action="/create-test">
+                <label for="title">Заглавие на теста:</label><br>
+                <input type="text" id="title" name="title" required><br><br>
+
+                <label for="description">Описание:</label><br>
+                <textarea id="description" name="description"></textarea><br><br>
+
+                <label for="creator_id">ID на създателя:</label><br>
+                <input type="number" id="creator_id" name="creator_id" required><br><br>
+
+                <label>Избери ученици, които имат достъп до теста:</label><br>
+                {% for student in students %}
+                    <input type="checkbox" name="allowed_users" value="{{ student.id }}">
+                    {{ student.name }} ({{ student.email }})<br>
+                {% endfor %}
+
+                <br>
+                <button type="submit">Създай теста</button>
+            </form>
+
+            <br>
+            <a href="/"><button>⬅ Назад към менюто</button></a>
+        </div>
+    </div>
+</body>
+</html>

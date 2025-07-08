@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Резултат</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="content-box">
+            <h1>Резултат от теста</h1>
+            <p>Верни отговори: <strong>{{ score }}</strong> от <strong>{{ total }}</strong></p>
+
+            <br>
+            <a href="/review/{{ test_id }}"><button>🔍 Преглед на верните отговори</button></a>
+            <a href="/"><button>⬅ Обратно към менюто</button></a>
+        </div>
+    </div>
+</body>
+</html>

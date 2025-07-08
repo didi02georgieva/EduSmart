@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добави въпроси</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="content-box">
+            <h1>Добави въпрос към тест №{{ test_id }}</h1>
+
+            <form method="post" action="/add-questions/{{ test_id }}">
+                <label>Въпрос:</label><br>
+                <input type="text" name="question_text" required><br><br>
+
+                <label>Тип на въпроса:</label><br>
+                <select name="question_type">
+                    <option value="multiple">Избор от отговори</option>
+                    <option value="open">Свободен отговор</option>
+                </select><br><br>
+
+                <label>Отговор 1:</label><br>
+                <input type="text" name="answer1" required>
+                <input type="radio" name="correct_answer" value="1"> Верен<br><br>
+
+                <label>Отговор 2:</label><br>
+                <input type="text" name="answer2" required>
+                <input type="radio" name="correct_answer" value="2"> Верен<br><br>
+
+                <label>Отговор 3:</label><br>
+                <input type="text" name="answer3" required>
+                <input type="radio" name="correct_answer" value="3"> Верен<br><br>
+
+                <button type="submit">Добави въпрос</button>
+            </form>
+
+            <br>
+            <a href="/tests"><button>⬅ Назад към тестовете</button></a>
+        </div>
+    </div>
+</body>
+</html>

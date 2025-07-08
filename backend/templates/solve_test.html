@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Реши тест{% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <div class="content-box">
+        <h1>{{ test.title }}</h1>
+        <p>{{ test.description }}</p>
+
+        <form method="post" action="/submit-answers">
+            {% for q in questions %}
+                <div style="margin-top: 20px;">
+                    <strong>Въпрос {{ loop.index }}:</strong> {{ q.text }}<br><br>
+
+                    {% for a in answers %}
+                        {% if a.question_id == q.id %}
+                            <label>
+                                <input type="radio" name="q{{ q.id }}" value="{{ a.id }}">
+                                {{ a.text }}
+                            </label><br>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            <br>
+            <input type="hidden" name="test_id" value="{{ test.id }}">
+            <button type="submit">📨 Изпрати отговори</button>
+        </form>
+
+        <br>
+        <a href="/tests"><button>⬅ Назад към тестовете</button></a>
+    </div>
+</div>
+{% endblock %}
